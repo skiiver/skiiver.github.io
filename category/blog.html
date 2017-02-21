@@ -4,14 +4,17 @@
 <head>
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" type="text/css" href="/theme/stylesheet/style.min.css">
+    <link rel="stylesheet/less" type="text/css" href="/theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
 
-  <link rel="stylesheet" type="text/css" href="/theme/pygments/github.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/pygments/monokai.min.css">
   <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/font-awesome.min.css">
 
 
 
 
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,17 +22,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="" />
 
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#666666">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#666666">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <meta name="author" content="Steve Kuchta" />
     <meta name="description" content="" />
-<meta property="og:site_name" content="Steve Kuchta"/>
+<meta property="og:site_name" content="FairGleich"/>
 <meta property="og:type" content="blog"/>
-<meta property="og:title" content="Steve Kuchta"/>
+<meta property="og:title" content="FairGleich"/>
 <meta property="og:description" content=""/>
 <meta property="og:locale" content="en_US"/>
 <meta property="og:url" content=""/>
+<meta property="og:image" content="/images/profile.png">
 
-  <title>Steve Kuchta &ndash;     Category blog
+  <title>FairGleich &ndash;     Category blog
 </title>
 
 </head>
@@ -37,24 +48,24 @@
   <aside>
     <div>
       <a href="">
-        <img src="/theme/img/profile.png" alt="" title="">
+        <img src="/images/profile.png" alt="" title="">
       </a>
       <h1><a href=""></a></h1>
 
-
+<p>Economist - Data Munger - Snow Miser</p>
       <nav>
         <ul class="list">
+          <li><a href="/pages/about.html#about">About</a></li>
+          <li><a href="/pages/macro102.html#macro102">Macro102</a></li>
+          <li><a href="/pages/micro101.html#micro101">Micro101</a></li>
 
-          <li><a href="http://getpelican.com/" target="_blank">Pelican</a></li>
-          <li><a href="http://python.org/" target="_blank">Python.org</a></li>
-          <li><a href="http://jinja.pocoo.org/" target="_blank">Jinja2</a></li>
-          <li><a href="#" target="_blank">You can modify those links in your config file</a></li>
         </ul>
       </nav>
 
       <ul class="social">
-        <li><a class="sc-You can add links in your config file" href="#" target="_blank"><i class="fa fa-You can add links in your config file"></i></a></li>
-        <li><a class="sc-Another social link" href="#" target="_blank"><i class="fa fa-Another social link"></i></a></li>
+        <li><a class="sc-linkedin" href="http://www.linkedin.com/in/sakuchta/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/skiiver" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/steve_kuchta" target="_blank"><i class="fa fa-twitter"></i></a></li>
       </ul>
     </div>
 
@@ -63,77 +74,54 @@
   <main>
 
 
+    <nav>
+      <a href="">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/tags.html">Tags</a>
+
+
+    </nav>
+
 
 
 <article>
   <header>
-    <h2><a href="/first-post.html#first-post">First Post</a></h2>
+    <h2><a href="/blog-intro.html#blog-intro">Blog Intro</a></h2>
     <p>
-          Posted on Wed 25 January 2017 in <a href="/category/blog.html">blog</a>
+          Posted on Wed 15 February 2017 in <a href="/category/blog.html">blog</a>
 
 
+          &#8226;     Tagged with
 
+              <a href="/tag/pelican.html">pelican</a>,              <a href="/tag/python.html">python</a>,              <a href="/tag/jupyter.html">jupyter</a>
     </p>
   </header>
   <div>
-      <p>First post test</p>
-<p>Second Post. I'm changing it up.</p>
+      <p>testing jupyter notebook inclusion</p>
       <br>
-      <a class="btn" href="/first-post.html#first-post">    Continue reading
+      <a class="btn" href="/blog-intro.html#blog-intro">    Continue reading
 </a>
   </div>
   <hr />
 </article>
 <article>
   <header>
-    <h2><a href="/fourth-post.html#fourth-post">Fourth Post</a></h2>
+    <h2><a href="/jupyter-test.html#jupyter-test">Jupyter Test</a></h2>
     <p>
-          Posted on Wed 25 January 2017 in <a href="/category/blog.html">blog</a>
+          Posted on Wed 15 February 2017 in <a href="/category/blog.html">blog</a>
 
 
+          &#8226;     Tagged with
 
+              <a href="/tag/pelican.html">pelican</a>,              <a href="/tag/python.html">python</a>,              <a href="/tag/jupyter.html">jupyter</a>
     </p>
   </header>
   <div>
-      <p>Fourth Post.  Looks like it's working</p>
+      <p>testing jupyter notebook inclusion</p>
       <br>
-      <a class="btn" href="/fourth-post.html#fourth-post">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="/second-post.html#second-post">Second Post</a></h2>
-    <p>
-          Posted on Wed 25 January 2017 in <a href="/category/blog.html">blog</a>
-
-
-
-    </p>
-  </header>
-  <div>
-      <p>Second Post. I'm changing it up.</p>
-      <br>
-      <a class="btn" href="/second-post.html#second-post">    Continue reading
-</a>
-  </div>
-  <hr />
-</article>
-<article>
-  <header>
-    <h2><a href="/third-post.html#third-post">Third Post</a></h2>
-    <p>
-          Posted on Wed 25 January 2017 in <a href="/category/blog.html">blog</a>
-
-
-
-    </p>
-  </header>
-  <div>
-      <p>Second Post. I'm changing it up.  Again.</p>
-      <br>
-      <a class="btn" href="/third-post.html#third-post">    Continue reading
+      <a class="btn" href="/jupyter-test.html#jupyter-test">    Continue reading
 </a>
   </div>
 </article>
@@ -145,7 +133,7 @@
 
 
     <footer>
-<p>&copy; Steve Kuchta </p>
+<p>&copy; Steve Kuchta 2017</p>
 <p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
 </p>    </footer>
   </main>
@@ -158,9 +146,9 @@
 {
   "@context" : "http://schema.org",
   "@type" : "Blog",
-  "name": " Steve Kuchta ",
+  "name": " FairGleich ",
   "url" : "",
-  "image": "",
+  "image": "/images/profile.png",
   "description": ""
 }
 </script>

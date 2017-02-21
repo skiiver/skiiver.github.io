@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,400italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet/less" type="text/css" href="/theme/stylesheet/style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js" type="text/javascript"></script>
+
+  <link rel="stylesheet" type="text/css" href="/theme/pygments/monokai.min.css">
+  <link rel="stylesheet" type="text/css" href="/theme/font-awesome/css/font-awesome.min.css">
+
+
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="" />
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#666666">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#666666">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="author" content="Steve Kuchta" />
+    <meta name="description" content="" />
+<meta property="og:site_name" content="FairGleich"/>
+<meta property="og:type" content="blog"/>
+<meta property="og:title" content="FairGleich"/>
+<meta property="og:description" content=""/>
+<meta property="og:locale" content="en_US"/>
+<meta property="og:url" content=""/>
+<meta property="og:image" content="/images/profile.png">
+
+  <title>FairGleich &ndash; Micro101</title>
+
+</head>
+<body>
+  <aside>
+    <div>
+      <a href="">
+        <img src="/images/profile.png" alt="" title="">
+      </a>
+      <h1><a href=""></a></h1>
+
+<p>Economist - Data Munger - Snow Miser</p>
+      <nav>
+        <ul class="list">
+          <li><a href="/pages/about.html#about">About</a></li>
+          <li><a href="/pages/macro102.html#macro102">Macro102</a></li>
+          <li><a href="/pages/micro101.html#micro101">Micro101</a></li>
+
+        </ul>
+      </nav>
+
+      <ul class="social">
+        <li><a class="sc-linkedin" href="http://www.linkedin.com/in/sakuchta/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+        <li><a class="sc-github" href="https://github.com/skiiver" target="_blank"><i class="fa fa-github"></i></a></li>
+        <li><a class="sc-twitter" href="https://twitter.com/steve_kuchta" target="_blank"><i class="fa fa-twitter"></i></a></li>
+      </ul>
+    </div>
+
+
+  </aside>
+  <main>
+
+
+    <nav>
+      <a href="">    Home
+</a>
+
+      <a href="/archives.html">Archives</a>
+      <a href="/tags.html">Tags</a>
+
+
+    </nav>
+
+<article class="single">
+  <header>
+    <h1 id="micro101">Micro101</h1>
+  </header>
+  <div>
+    <p>Testing new setup</p>
+<p>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Import">Import<a class="anchor-link" href="#Import">&#182;</a></h1><p>We start by importing necessary modules</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span> 
+<span class="kn">import</span> <span class="nn">xlwings</span> <span class="k">as</span> <span class="nn">xw</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">pypyodbc</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Functions">Functions<a class="anchor-link" href="#Functions">&#182;</a></h2><p>Then we do some stuff with functions</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">xl_conn</span><span class="p">(</span><span class="n">file_url</span><span class="p">):</span>
+    <span class="n">wb</span> <span class="o">=</span> <span class="n">xw</span><span class="o">.</span><span class="n">Book</span><span class="p">(</span><span class="n">file_url</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">wb</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Connected to Workbook&#39;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">wb</span>
+
+<span class="n">xl_filename</span> <span class="o">=</span> <span class="s2">r&quot;20170131 Xolair Analytical Platform KPI Metrics v1.1 (updated using SHA data till Nov&#39;16).xlsx&quot;</span> <span class="c1"># when nb is in same dir</span>
+<span class="c1">#wkbk_dir = &#39;excel&#39;</span>
+<span class="n">xl_url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">(),</span> <span class="n">xl_filename</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">xl_url</span><span class="p">)</span>
+
+
+<span class="c1">#data = Range(&quot;E5&quot;).vertical.value  # data from excel</span>
+
+<span class="c1">## for histogram</span>
+
+<span class="c1">#plt.hist(data)</span>
+<span class="c1">#plt.title(&#39;Expected Growth by Territory&#39;)</span>
+<span class="c1">#plt.xlabel(&#39;Exp Growth Rate&#39;)</span>
+<span class="c1">#plt.ylabel(&#39;Num of Territories&#39;)</span>
+<span class="c1">#plt.show()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></p>
+  </div>
+</article>
+
+    <footer>
+<p>&copy; Steve Kuchta 2017</p>
+<p>    Powered by <a href="http://getpelican.com" target="_blank">Pelican</a> - <a href="https://github.com/alexandrevicenzi/flex" target="_blank">Flex</a> theme by <a href="http://alexandrevicenzi.com" target="_blank">Alexandre Vicenzi</a>
+</p>    </footer>
+  </main>
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context" : "http://schema.org",
+  "@type" : "Blog",
+  "name": " FairGleich ",
+  "url" : "",
+  "image": "/images/profile.png",
+  "description": ""
+}
+</script>
+</body>
+</html>
